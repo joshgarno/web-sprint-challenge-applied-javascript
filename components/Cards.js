@@ -23,7 +23,6 @@
 
 axios.get('https://lambda-times-api.herokuapp.com/articles')
 	.then(results => {
-        console.log(results);
 		results.data.articles.bootstrap.forEach(article => createCard(article))
 })
 .catch(err => console.log(err))
@@ -48,8 +47,6 @@ function createCard(article) {
     divHeadline.classList.add('headline');
     divAuthor.classList.add('author');
     divImgContainer.classList.add('img-container');
-
-    span3.textContent = (article);
 
     divImgContainer.appendChild(divImg);
 
